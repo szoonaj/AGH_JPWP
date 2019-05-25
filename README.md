@@ -3,7 +3,7 @@
       - "Programowanie aplikacji klasycznych dla platformy .NET"
       - "Opracowywanie gier za pomocą aparatu Unity"
       
-Uwaga: Jeśli VS zostało już zainstalowane, uruchum VS Installer, Modyfikuj i doinstaluj brakujące komponenty. 
+      Uwaga: Jeśli VS zostało już zainstalowane, uruchum VS Installer, Modyfikuj i doinstaluj brakujące komponenty. 
 
 2. PROJEKT znajduje się w folderze "Pong Game - project" - ten folder wybierz później klikając "Open Projet".
 
@@ -11,7 +11,7 @@ Uwaga: Jeśli VS zostało już zainstalowane, uruchum VS Installer, Modyfikuj i 
 
 4. URUCHOMIENIE projektu - otwórz Unity, "Open Project". 
 
-Uwaga: Gdyby pojawiły się błędy w Unity Package Manager Error - An error occured while resolving packages, Project has invalid dependencies (...) należy w pliku Pong Game - project\Packages\manifest.json usunąć linie, o których mowa w wyrzuconym błędzie.
+      Uwaga: Gdyby pojawiły się błędy w Unity Package Manager Error - An error occured while resolving packages, Project has invalid             dependencies (...) należy w pliku Pong Game - project\Packages\manifest.json usunąć linie, o których mowa w wyrzuconym błędzie.
 
 5. SKRYPTY (kod źródłowy) znajdują się w folderze Pong Game - project\Assets\Scripts.
 
