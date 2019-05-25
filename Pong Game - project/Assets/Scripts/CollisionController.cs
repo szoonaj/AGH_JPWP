@@ -8,7 +8,7 @@ public class CollisionController : MonoBehaviour
 
     public ScoreController scoreController;
 
-    void BounceFromRacket(Collision2D c)
+    void BounceFromRacket(Collision2D c)        // manipulowanie odbijaniem sie pilki od rakiet
     {
         Vector3 ballPosition = this.transform.position;
         Vector3 racketPosition = c.gameObject.transform.position;

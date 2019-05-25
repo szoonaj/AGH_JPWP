@@ -10,14 +10,13 @@ public class BallMovement : MonoBehaviour
 
     int hitCounter = 0;
 
-    // Start is called before the first frame update
-    // Use this for initialisation
-    void Start()
+    void Start()                                // start skryptu
     {
-        StartCoroutine(this.StartBall());
+        StartCoroutine(this.StartBall());       // specjalna funkcja ktora wstrzymuje wykonanie do momentu napotkania okreslonego warunku,
+                                                // pozniej startuje z powrotem z miejsca, w ktorym zostala zatrzymana
     }
 
-    void PositionBall(bool isStartingPlayer1)
+    void PositionBall(bool isStartingPlayer1)   // odpowiada za pojawienie sie pilki po zdobyciu punktu
     {
         this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 
@@ -27,21 +26,20 @@ public class BallMovement : MonoBehaviour
             this.gameObject.transform.localPosition = new Vector3(100, 0, 0);
     }
 
-    public IEnumerator StartBall(bool isStartingPlayer1 = true)
+    public IEnumerator StartBall(bool isStartingPlayer1 = true)     // samoistny ruch pilki na poczatku gry
     {
         this.PositionBall(isStartingPlayer1);
 
         this.hitCounter = 0;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2);     // wykonanie zostanie wstrzymane
         if (isStartingPlayer1)
-            this.MoveBall(new Vector2(-1, 0));
+            this.MoveBall(new Vector2(-1, 0));  // zaczyna gracz1 >> lec w jego kierunku 
         else
             this.MoveBall(new Vector2(1, 0));
         
     }
 
-
-    public void MoveBall(Vector2 dir)
+    public void MoveBall(Vector2 dir)       // manipulowanie szybkoscia pilki
     {
         dir = dir.normalized;
 

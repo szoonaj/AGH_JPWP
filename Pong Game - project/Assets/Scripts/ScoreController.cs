@@ -24,7 +24,7 @@ public class ScoreController : MonoBehaviour
         scorePlayer2++;
     }
 
-    void Update()
+    void Update()       // sprawdzanie warunku zwyciestwa
     {
         if (this.scorePlayer1 >= this.goalToWin || this.scorePlayer2 >= this.goalToWin)
         {
@@ -34,7 +34,7 @@ public class ScoreController : MonoBehaviour
             
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate()      // aktualizujemy wyswietlany wynik
     {
         Text uiScorePlayer1 = this.scoreTextPlayer1.GetComponent<Text>();
         uiScorePlayer1.text = this.scorePlayer1.ToString();

@@ -10,8 +10,6 @@ ScriptsOnlyBuild:
     - Racket2
     - ScoreController
     - SoundController
-    UnityEditor.TestRunner.dll:
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -85,9 +83,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9978}
     - Class: 114
-      Script: {instanceID: 11538}
+      Script: {instanceID: 10528}
     - Class: 114
-      Script: {instanceID: 22554}
+      Script: {instanceID: 10532}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -144,7 +142,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9814}
     - Class: 114
-      Script: {instanceID: 11538}
+      Script: {instanceID: 10528}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -201,7 +199,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9814}
     - Class: 114
-      Script: {instanceID: 11538}
+      Script: {instanceID: 10528}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -457,6 +455,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Editor
+    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -879,6 +889,18 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: QuitButton
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackButton
+  - hash:
+      serializedVersion: 2
       Hash: 8649814970b42d345b89944b862453cc
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -895,21 +917,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: QuitButton
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BackButton
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: D:/STUDIA/4 SEMESTR/JPWP/PongGame/Pong Game.exe
+  playerPath: D:/STUDIA/4 SEMESTR/JPWP/PongGameApp-set-res/Pong Game.exe
