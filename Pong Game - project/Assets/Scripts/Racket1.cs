@@ -8,8 +8,11 @@ public class Racket1 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float v = Input.GetAxisRaw("Vertical");     // project settings >> input >> definiujemy klawisze dla rakiet
-
+        float v = Input.GetAxisRaw("Vertical");
+        
+        // zdefiniuj druga zmienna, ktora bedzie odpowiadala za ruch w poziomie 
+        // zastosuj ja w ponizszej lini
+        
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, v) * movementSpeed; 
     }
     
