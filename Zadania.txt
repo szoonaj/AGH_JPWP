@@ -1,0 +1,70 @@
+1. 
+a) zmien ksztalt pilki na cylinder (lub na taki, zeby przypominala trzeci¹, ale mniejsza rakietkê),
+b) zmien mase pi³ki na 100 i zaobserwuj ró¿nicê
+c) zmien liczbe punktów potrzebnych do zwyciestwa na 3
+d) spraw by gra: 
+	- nigdy sie nie zaczela
+	- nigdy sie nie konczyla
+poprzez "zamrazanie" odpowiednich pozycji pi³ki
+e) spraw by rakietka mogla poruszac sie te¿ w poziomie (oba X axis w project setting/input)
+
+ float v = Input.GetAxisRaw("Vertical");     // project settings >> input >> definiujemy klawisze dla rakiet
+        float x = Input.GetAxisRaw("Horizontal");
+        GetComponent<Rigidbody2D>().velocity = new Vector2(x, v) * movementSpeed;
+
+2. dodaj przycisk pauzy oraz pauzowanie za pomoc¹ klawisza np spacji (PauseButton - w nim trzeba dodaæ On Click oraz skrypt
+public void Pause()
+    {
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+           // isPaused = true;
+        }
+        else if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1; //Resume Game..
+           // isPaused = false;
+        }
+    }
+    
+    bool isPaused = false;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+
+            if (isPaused == true)
+            {
+
+                isPaused = false;
+                Time.timeScale = 1;
+            }
+
+            else if (isPaused == false)
+            {
+
+                isPaused = true;
+                Time.timeScale = 0;
+            }
+
+        }
+    }
+3. AI - nowy skrypt do racket2, tamten dezaktywowac
+public float movementSpeed;
+
+    public GameObject ball;
+
+    private void FixedUpdate()
+    {
+        if (Mathf.Abs(this.transform.position.y - ball.transform.position.y) > 10)      // mniejsza liczba = lepsze AI
+        {
+            if (transform.position.y < ball.transform.position.y)
+                GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1) * movementSpeed;
+            else
+                GetComponent<Rigidbody2D>().velocity = new Vector2(0, -1) * movementSpeed;
+        }
+        else
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+
+    }
